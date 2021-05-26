@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mobile shell that supports roaming and intelligent local echo. Like SSH secure shell, but allows mobility and more responsive and robust.">
     <meta name="author" content="Keith Winstein <mosh-devel@mit.edu>">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mosh.org" />
+    <meta property="og:site_name" content="Mosh" />
+    <meta property="og:title" content="Mosh: the mobile shell"/>
+    <meta property="og:description" content="Mobile shell that supports roaming and intelligent local echo. Like SSH secure shell, but allows mobility and more responsive and robust."/>
 
     <link rel="canonical" href="https://mosh.org" />
 
@@ -18,12 +23,6 @@
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -77,8 +76,8 @@
         <h2>(mobile shell)</h2>
         <p>Remote terminal application that
         allows <strong class="callout">roaming</strong>, supports <strong class="callout">intermittent connectivity</strong>, and provides intelligent <strong class="callout">local echo</strong> and line editing of user keystrokes.</p>
-        <p>Mosh is a replacement for SSH. It's more robust and responsive, especially over Wi-Fi, cellular, and long-distance links.</p>
-        <p>Mosh is free software, available for GNU/Linux, BSD, macOS, Solaris, Android, and Chrome. An iOS version is in testing.</p>
+        <p>Mosh is a replacement for interactive SSH terminals. It's more robust and responsive, especially over Wi-Fi, cellular, and long-distance links.</p>
+        <p>Mosh is free software, available for GNU/Linux, BSD, macOS, Solaris, Android, Chrome, and iOS.</p>
       </div>
       <div class="span5"><img src="mosh.png" style="max-width:120%;" alt="">
       </div>
@@ -160,6 +159,26 @@
   </div>
 
   <ul id="news-list">
+    <li><b>September 29, 2017</b>: The
+	macOS <a href="https://github.com/Homebrew/homebrew-core/pull/18636">Homebrew
+	collection renames its formula from &ldquo;mobile-shell&rdquo; to
+	&ldquo;mosh&rdquo;</a>.</li>
+
+    <li><b>July 21, 2017</b>: <a href="https://mailman.mit.edu/pipermail/mosh-users/2017-July/000357.html">Mosh 1.3.2 released</a>, with John Hood as
+      release lead. The release includes improved tests, bug fixes,
+      and improvements to IPv6 support on non-Linux systems.</li>
+
+    <li><b>March 25,
+2017</b>: <a href="http://mailman.mit.edu/pipermail/mosh-users/2017-March/000341.html">Mosh
+1.3.0 released</a>, with John Hood as release lead. The release
+includes broader platform compatibility, robustness improvements,
+better testing, and fixes for excess CPU consumption in some cases. We
+have switched to semver.org-style versioning and will increment the
+minor version number whenever we add new functionality. (In our
+previous practice, this release would probably have been called
+&ldquo;1.2.7.&rdquo;)</li>
+
+    <li><b>September 20, 2016</b>: <a href="http://blink.sh">Blink Shell: Mosh &amp; SSH Terminal for iOS</a> has its first gold release on the <a href="https://itunes.apple.com/app/id1156707581">App Store</a>. Free version is available on <a href="https://github.com/blinksh/blink">GitHub</a>.
     <li><b>August 10,
 2016</b>: <a href="https://mailman.mit.edu/pipermail/mosh-users/2016-August/000330.html">Mosh
 1.2.6 released</a>, with John Hood as release lead. New features
@@ -172,7 +191,7 @@ by the MIT <a href="https://sipb.mit.edu">Student Information Processing Board</
 
     <li><b>June 15, 2016</b>: <a href="https://github.com/blinksh/blink">Mosh for iOS (Blink)</a> has its first <a href="https://mailman.mit.edu/pipermail/mosh-devel/2016-June/001339.html">alpha release</a>.
 
-    <li><b>April 17, 2016</b>: <a href="https://play.google.com/store/apps/details?id=com.termux">Termux</a> (open source Linux environment for Android) adds a mosh 1.2.5 package.</li>
+    <li><b>April 17, 2016</b>: <a href="https://f-droid.org/en/packages/com.termux">Termux</a> (open source Linux environment for Android) adds a mosh 1.2.5 package.</li>
     <li><b>July 23, 2015</b>: <a href="https://mailman.mit.edu/pipermail/mosh-users/2015-July/000283.html">Mosh 1.2.5 released</a>, with John Hood as release lead. New features include support for mouse modes and a reconfigurable escape character, and initial support for IPv6.</li>
     <li><b>May 31, 2015</b>: Another team of Stanford students has <a href="https://reproducingnetworkresearch.wordpress.com/2015/05/31/cs244-15-mosh-reproducing-network-research-results/">reproduced some of the Mosh research paper's results</a>.
     <li><b>January 20, 2014</b>: <a href="https://github.com/rpwoodbu/mosh-chrome/wiki">Mosh for Chrome</a>, which brings Mosh to the Chrome browser and Chrome OS, is released. It can be installed <a href="https://chrome.google.com/webstore/detail/mosh/ooiklbnjmhbcgemelgfhaeaocllobloj">here</a>.</li>
@@ -222,8 +241,8 @@ packet loss) helps Iain Learmonth <a href="elevator.txt">escape from an elevator
   <!-- OSX / Darwin -->
   <div class="row">
     <div class="span4" style="vertical-align: top;">
-      <h3 class="callout"><a href="https://www.apple.com"><img class="logo" src="macosx.png" alt=""></a>macOS <small>10.9 or later</small></h3>
-      <div class="prelike">Binary package: <a href="https://mosh.org/mosh-1.2.6.pkg"><img src="dmg.png" alt=""> mosh-1.2.6.pkg</a>.</div>
+      <h3 class="callout"><a href="https://www.apple.com"><img class="logo" src="macosx.png" alt=""></a>macOS <small>10.10 or later</small></h3>
+      <div class="prelike">Binary package: <a href="https://mosh.org/mosh-1.3.2.pkg"><img src="dmg.png" alt=""> mosh-1.3.2.pkg</a>.</div>
       <!-- <br />
       <div class="prelike">OS X 10.5&ndash;10.9: <a href="https://mosh.org/mosh-1.2.5-leopard.pkg"><img src="dmg.png" alt=""> mosh-1.2.5-leopard.pkg</a>.</div> -->
       <p><small>This is a standalone OS X package that will work on any supported Macintosh.  However, if you are using a package manager such as Homebrew or MacPorts, we suggest using it to get Mosh, for better compatibility and automatic updates.</small></p>
@@ -231,7 +250,7 @@ packet loss) helps Iain Learmonth <a href="elevator.txt">escape from an elevator
 
     <div class="span4" style="vertical-align: top;">
       <h3 class="callout"><a href="https://mxcl.github.io/homebrew/"><img class="logo" src="homebrew2.png" alt=""></a>Homebrew <small>OS X 10.5 or later</small></h3>
-            <pre>$ brew install mobile-shell</pre>
+            <pre>$ brew install mosh</pre>
       <br />
     </div>
     <div class="span4" style="vertical-align: top;">
@@ -275,7 +294,7 @@ packet loss) helps Iain Learmonth <a href="elevator.txt">escape from an elevator
         <br />
         <img src="assets/img/termux.png" alt="" style="height: 24px; width: 24px; display:inline-block; vertical-align:middle">
         &nbsp;
-        <a href="https://play.google.com/store/apps/details?id=com.termux">Install Termux from the Play Store</a></div>
+        <a href="https://f-droid.org/en/packages/com.termux">Install Termux from F-Droid</a></div>
       <br />
     </div>
 
@@ -285,6 +304,22 @@ packet loss) helps Iain Learmonth <a href="elevator.txt">escape from an elevator
         <img src="mosh-chrome.png" alt="" style="height: 24px; width: 24px; display:inline-block; vertical-align:middle">
         &nbsp;
         Install <a href="https://chrome.google.com/webstore/detail/mosh/ooiklbnjmhbcgemelgfhaeaocllobloj">Mosh for Chrome.</a>
+      </div>
+    </div>
+
+    <div class="span4" style="vertical-align: top;">
+      <h3 class="callout"><img class="logo" src="App-store-icon.png" alt=""/>iOS</h3>
+      <div class="prelike">
+        <img src="blink_shell.png" alt="" style="height: 24px; width: 24px; display:inline-block; vertical-align:middle">
+        &nbsp;
+	<a href="https://itunes.apple.com/app/id1156707581">Install Blink Shell from the App Store</a>
+        <br /><br />
+        or...<br />
+        <br />
+        <img src="GitHub-Mark-32px.png" alt="" style="height: 24px; width: 24px; display:inline-block; vertical-align:middle">
+        &nbsp;
+	<a href="https://github.com/blinksh/blink">build it from source.</a>
+	<div style="clear:both"></div>
       </div>
     </div>
   </div>
@@ -381,8 +416,8 @@ only. The vendors shown aren't affiliated with and haven't endorsed Mosh.</small
       <div class="row-fluid">
         <div class="span6">
           <h3 class="callout">Latest release</h3><br>
-            <p>Extract <a href="//mosh.org/mosh-1.2.6.tar.gz">mosh-1.2.6.tar.gz</a>, then</p>
-    <pre>$ cd mosh-1.2.6
+            <p>Extract <a href="//mosh.org/mosh-1.3.2.tar.gz">mosh-1.3.2.tar.gz</a>, then</p>
+    <pre>$ cd mosh-1.3.2
 $ ./configure
 $ make
 # make install</pre>
@@ -575,7 +610,7 @@ in <a href="https://www.usenix.org/publications/login">USENIX
       state of any object from one host to another. Datagrams
       are encrypted and authenticated
       using <a href="http://www.cs.ucdavis.edu/~rogaway/ocb/">AES-128
-      in OCB mode</a>. While SSP takes care of the networking
+      in OCB3 mode</a>. While SSP takes care of the networking
       protocol, it is the implementation of the object being
       synchronized that defines the ultimate semantics of the
       protocol.</p>
@@ -937,8 +972,8 @@ remote servers "feel" more like the local machine!</p>
 
   <dt>Q: Why is my terminal's scrollback buffer incomplete?</dt>
 
-        <dd><p>Mosh 1.2 synchronizes only the visible state of the terminal.  Mosh
-        1.3 will have complete scrollback support; see <a
+        <dd><p>Mosh synchronizes only the <b>visible</b> state of the terminal.  We
+are tracking this issue; see <a
         href="https://github.com/keithw/mosh/issues/2">this issue</a> and the
         others which are linked from there.  For now, the workaround is to use
         <a href="https://www.gnu.org/software/screen/">screen</a> or <a
@@ -962,10 +997,15 @@ remote servers "feel" more like the local machine!</p>
   the <code>MOSH_ESCAPE_KEY</code> variable; see the Mosh man page for
   details.</p></dd>
 
+  <dt>Q: How can I make the server automatically clean up dormant sessions?</dt>
+
+  <dd><p>Please see the entries for <code>MOSH_SERVER_NETWORK_TMOUT</code>
+      and <code>MOSH_SERVER_SIGNAL_TMOUT</code> in the <i>mosh-server(1)</i> man page.</p></dd>
+
   <dt>Q: What is Mosh's security track record so far?</dt>
 
   <dd><p>Mosh 1.0 was released in March 2012. As of the release of Mosh
-      1.2.6 in August 2016, as far as the developers are aware:
+      1.3.2 in July 2017, as far as the developers are aware:
 
       <ul>
       
@@ -983,7 +1023,7 @@ remote servers "feel" more like the local machine!</p>
 	1.2.1, released May 2012). Another issue allowed the server
 	host to cause the mosh-client to send UDP datagrams to an
 	incorrect address, foiling its attempt to connect (fixed in
-	Mosh 1.2.2, released July 2012).
+	Mosh 1.2.3, released October 2012).
       </ul></dd>
 
       <dt>Q: How does Mosh's security compare with SSH's?</dt>
@@ -1015,6 +1055,23 @@ remote servers "feel" more like the local machine!</p>
       brief SSH session that is used to set up a long-running Mosh
       session.</p></dd>
 
+  <dt>Q: Is Mosh affected by the 2018 <a href="https://eprint.iacr.org/2018/1040.pdf">attacks against the OCB2 cipher mode</a>?</dt>
+
+  <dd><p>Not that we know of&mdash;Mosh uses OCB3. The authors of the
+paper write that the attack is not applicable to OCB3.</p></dd>
+
+  <dt>Q: Why does mosh use AES-128 for a session-key, not AES-192 or AES-256?</dt>
+
+  <dd>
+    <ul>
+      <li>AES-128 is more than an adequate key length for a session key.</li>
+
+      <li>The <a href="https://web.cs.ucdavis.edu/~rogaway/ocb/ocb-faq.htm#what-blockcipher">OCB FAQ</a> recommends AES-128.</li>
+
+      <li>AES-128 is a bit nicer and is not subject to the related-key attacks that afflict AES-192 and AES-256. (Schneier: "the key schedule for 256-bit version is pretty lousy -- something we pointed out in our 2000 paper -- but doesn't extend to AES with a 128-bit key." See <a href="https://www.schneier.com/blog/archives/2009/07/another_new_aes.html">this blog post</a>.)</li>
+    </ul>
+  </dd>
+
   <dt>Q: Does mosh work with Amazon EC2?</dt>
 
   <dd><p>Yes, it works great, but please remember to open up UDP ports 60000&ndash;61000 on the EC2 firewall.</p></dd>
@@ -1031,7 +1088,7 @@ remote servers "feel" more like the local machine!</p>
       </p>
   </dd>
 
-  <dt>Q: What's the difference between mosh, mosh-client, and mosh-server?   What one do I use?</dt>
+  <dt>Q: What's the difference between mosh, mosh-client, and mosh-server?   Which one do I use?</dt>
 
   <dd>
       <p>The <code>mosh</code> command is a wrapper script that is designed to be the primary way that
@@ -1222,9 +1279,8 @@ server's IP address with "host remotehost".</p>
 
         <div class="callout">
     Messages may optionally be encrypted with <a href="keithw-gpg.txt">Keith Winstein's public key</a>:
-
-<pre>pub   4096R/FE254C69 2012-02-05 [expires: 2017-03-17]
-      Key fingerprint = B1A4 7069 121F 6642 BB3D  7F3E 20B7 283A FE25 4C69</pre>
+<pre>pub   rsa4096 2012-02-05 [SC] [expires: 2022-02-18]
+      B1A4 7069 121F 6642 BB3D  7F3E 20B7 283A FE25 4C69</pre>
         </div></li>
 
       </ul>
